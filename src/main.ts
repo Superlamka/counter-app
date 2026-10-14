@@ -3,9 +3,9 @@ import { RouteReuseStrategy, provideRouter, withComponentInputBinding, withPrelo
 import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular';
 
 import { routes } from './app/app.routes';
-import { CounterComponent } from './app/components/counter/counter.component';
+import { AppComponent } from './app/app.component';
 
-bootstrapApplication(CounterComponent, {
+bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),

@@ -22,16 +22,18 @@ describe('Tab1Page', () => {
       id: 'first',
       name: 'První',
       value: 1,
+      createdAt: '2026-09-17T08:00:00.000Z',
     };
     const second: SavedCounter = {
       id: 'second',
       name: 'Druhé',
       value: 2,
+      createdAt: '2026-09-17T09:00:00.000Z',
     };
 
     component.onSaved(first);
     component.onSaved(second);
 
-    expect(component.savedCounters).toEqual([second, first]);
+    expect(component.onSaved).toEqual([second, first]);
   });
 });
